@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var resumedata = {
+            firstName: "Rixon",
+            lastName: "Raj",
+            dob: "16/Mar/1997",
+            qualification: [
+                {
+                    sslc: "87%",
+                    instituteName : "SSKV School"
+                },
+                {
+                    hsc: "83%",
+                    instituteName:"MLM School"
+                },
+                {
+                    underGrad: "65%",
+                    instituteName:"Rajalakshmi Engineering College"
+                },
+                {
+                    postGrad: "71%",
+                    instituteName:"Madras Institute of Technology"
+                }
+            ],
+            skills: ["HTML", "CSS", "Bootstrap", "JavaScript", "React", "Angular", "SQL", "MongoDB", "Photoshop", "IOT", "C", "Arduino", "Raspberry Pi"]
+        }
+
+        for (let index = 0; index < resumedata.skills.length; index++) {
+            console.log(resumedata.skills[index])
+            
+        }
+
+
+
+        for (const key in resumedata) {
+            
+            console.log(resumedata[key])
+
+            if (key == "qualification"){
+                
+                for (const iterator of resumedata[key]) {
+                        console.log(iterator)
+                }
+                
+            }
+
+            if (key == "skills"){
+                resumedata[key].forEach(element => {
+                    console.log(element)
+                });
+            }
+            
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
